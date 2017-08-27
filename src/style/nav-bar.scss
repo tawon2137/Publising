@@ -1,0 +1,111 @@
+@import "./mixin.scss";
+@import "./variable.scss";
+@import "./function.scss";
+
+  .tw-navbar{
+      position: relative;
+      height: $nav-height;
+      line-height: $nav-height;
+      border-radius: $nav-radius;
+      top : 0;
+      width: 100%;
+      box-shadow: $nav-shadow;
+      will-change : opacity;
+      @include transition(opacity 0.2s ease-in);
+      z-index: 100;
+      user-select : none;
+      &.fixed {
+        position: fixed;
+      }
+      &.clear{
+          top: 0;
+          box-shadow: none;
+          background-color: transparent;
+      }
+      & ul{
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top:0;
+        left:0;
+        right: 0;
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        & .right{
+          float: right;
+        }
+        & .left{
+          float: left;
+        }
+        & li{
+          display: block;
+          float: right;
+          position: relative;
+          padding: $nav-li-padding;
+          text-align: center;
+          background-color: transparent;
+          outline: none;
+          @include transition(background 0.2s ease-out);
+          border-radius: 5px;
+          cursor: pointer;
+          font-weight: bold;
+          & a{
+            text-decoration: none;
+            color : inherit;
+          }
+
+          &.title{
+            position: relative;
+            font-size: 2rem;
+            line-height: 90px;
+            height: $nav-height;
+            float: left;
+            & img {
+              position: absolute;
+              top:0;
+              left:0;
+              bottom: 0;
+              margin: auto;
+            }
+          }
+          &:not(.title):hover{
+            background: rgba(0,0,0,0.1);
+          }
+          & a{
+            cursor: pointer;
+          }
+
+        }
+      }
+      & .left{
+        float: left;
+      }
+      & .right{
+        float: right;
+      }
+      & .center{
+          display: inline-block;
+          padding: 0;
+          position: absolute;
+          left : 50%;
+          @include transform(translateX(-50%));
+      }
+  }
+
+  .not-cursor{
+    cursor: default !important;
+    &:hover{
+      background: transparent !important;
+    }
+  }
+
+  @media only screen and (max-width : 1366px) {
+
+  }
+  @media only screen and (max-width : 720px) {
+    .title{
+        font-size: 1.5rem !important;
+    }
+  }
