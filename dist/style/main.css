@@ -2740,7 +2740,7 @@ html {
   }
 
   .container {
-    width: 800px !important;
+    width: 90% !important;
   }
 }
 
@@ -2958,7 +2958,6 @@ html {
   transition: background 0.2s ease-out;
   border-radius: 5px;
   cursor: pointer;
-  font-weight: bold;
 }
 
 .tw-navbar ul li a {
@@ -3027,7 +3026,7 @@ html {
 
 .input-field-label {
   bottom: 0;
-  font-size: 1rem;
+  font-size: 1.3rem;
   pointer-events: none;
   position: absolute;
   top: 0.8rem;
@@ -3035,8 +3034,9 @@ html {
   width: 100%;
   transform-origin: 0 0;
   white-space: nowrap;
-  text-align: left;
-  color: grey;
+  text-align: right;
+  padding-right: 1rem !important;
+  color: #fff;
   -webkit-transition: color 0.2s, transform 0.2s;
   -moz-transition: color 0.2s, transform 0.2s;
   -o-transition: color 0.2s, transform 0.2s;
@@ -3075,7 +3075,7 @@ html {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: #1a237e;
+  background: #fff;
   -webkit-transition: transform 0.2s ease,background 0.2s ease;
   -moz-transition: transform 0.2s ease,background 0.2s ease;
   -o-transition: transform 0.2s ease,background 0.2s ease;
@@ -3116,241 +3116,6 @@ input[type=search] {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  border: 0;
-  border-bottom: solid 1px rgba(0, 0, 0, 0.3);
-}
-
-input:not([type]).dirty + .input-field-label,
-input[type=text].dirty + .input-field-label,
-input[type=password].dirty + .input-field-label,
-input[type=email].dirty + .input-field-label,
-input[type=url].dirty + .input-field-label,
-input[type=time].dirty + .input-field-label,
-input[type=date].dirty + .input-field-label,
-input[type=datetime].dirty + .input-field-label,
-input[type=datetime-local].dirty + .input-field-label,
-input[type=tel].dirty + .input-field-label,
-input[type=number].dirty + .input-field-label,
-input[type=search].dirty + .input-field-label {
-  -webkit-transform: translateY(-1.5rem) scale(0.7);
-  -moz-transform: translateY(-1.5rem) scale(0.7);
-  -o-transform: translateY(-1.5rem) scale(0.7);
-  -ms-transform: translateY(-1.5rem) scale(0.7);
-  transform: translateY(-1.5rem) scale(0.7);
-}
-
-input:not([type]).dirty + .input-field-label + hr.focusline,
-input[type=text].dirty + .input-field-label + hr.focusline,
-input[type=password].dirty + .input-field-label + hr.focusline,
-input[type=email].dirty + .input-field-label + hr.focusline,
-input[type=url].dirty + .input-field-label + hr.focusline,
-input[type=time].dirty + .input-field-label + hr.focusline,
-input[type=date].dirty + .input-field-label + hr.focusline,
-input[type=datetime].dirty + .input-field-label + hr.focusline,
-input[type=datetime-local].dirty + .input-field-label + hr.focusline,
-input[type=tel].dirty + .input-field-label + hr.focusline,
-input[type=number].dirty + .input-field-label + hr.focusline,
-input[type=search].dirty + .input-field-label + hr.focusline {
-  -webkit-transform: scaleX(1);
-  -moz-transform: scaleX(1);
-  -o-transform: scaleX(1);
-  -ms-transform: scaleX(1);
-  transform: scaleX(1);
-}
-
-input:not([type])[placeholder] + .input-field-label,
-input[type=text][placeholder] + .input-field-label,
-input[type=password][placeholder] + .input-field-label,
-input[type=email][placeholder] + .input-field-label,
-input[type=url][placeholder] + .input-field-label,
-input[type=time][placeholder] + .input-field-label,
-input[type=date][placeholder] + .input-field-label,
-input[type=datetime][placeholder] + .input-field-label,
-input[type=datetime-local][placeholder] + .input-field-label,
-input[type=tel][placeholder] + .input-field-label,
-input[type=number][placeholder] + .input-field-label,
-input[type=search][placeholder] + .input-field-label {
-  -webkit-transform: translateY(-1.5rem) scale(0.7);
-  -moz-transform: translateY(-1.5rem) scale(0.7);
-  -o-transform: translateY(-1.5rem) scale(0.7);
-  -ms-transform: translateY(-1.5rem) scale(0.7);
-  transform: translateY(-1.5rem) scale(0.7);
-}
-
-input:not([type])[value] + .input-field-label,
-input[type=text][value] + .input-field-label,
-input[type=password][value] + .input-field-label,
-input[type=email][value] + .input-field-label,
-input[type=url][value] + .input-field-label,
-input[type=time][value] + .input-field-label,
-input[type=date][value] + .input-field-label,
-input[type=datetime][value] + .input-field-label,
-input[type=datetime-local][value] + .input-field-label,
-input[type=tel][value] + .input-field-label,
-input[type=number][value] + .input-field-label,
-input[type=search][value] + .input-field-label {
-  -webkit-transform: translateY(-1.5rem) scale(0.7);
-  -moz-transform: translateY(-1.5rem) scale(0.7);
-  -o-transform: translateY(-1.5rem) scale(0.7);
-  -ms-transform: translateY(-1.5rem) scale(0.7);
-  transform: translateY(-1.5rem) scale(0.7);
-}
-
-input:not([type])[value] + .input-field-label + hr.focusline,
-input[type=text][value] + .input-field-label + hr.focusline,
-input[type=password][value] + .input-field-label + hr.focusline,
-input[type=email][value] + .input-field-label + hr.focusline,
-input[type=url][value] + .input-field-label + hr.focusline,
-input[type=time][value] + .input-field-label + hr.focusline,
-input[type=date][value] + .input-field-label + hr.focusline,
-input[type=datetime][value] + .input-field-label + hr.focusline,
-input[type=datetime-local][value] + .input-field-label + hr.focusline,
-input[type=tel][value] + .input-field-label + hr.focusline,
-input[type=number][value] + .input-field-label + hr.focusline,
-input[type=search][value] + .input-field-label + hr.focusline {
-  -webkit-transform: scaleX(1);
-  -moz-transform: scaleX(1);
-  -o-transform: scaleX(1);
-  -ms-transform: scaleX(1);
-  transform: scaleX(1);
-  background: #1a237e;
-}
-
-input:not([type]).valid + .input-field-label,
-input[type=text].valid + .input-field-label,
-input[type=password].valid + .input-field-label,
-input[type=email].valid + .input-field-label,
-input[type=url].valid + .input-field-label,
-input[type=time].valid + .input-field-label,
-input[type=date].valid + .input-field-label,
-input[type=datetime].valid + .input-field-label,
-input[type=datetime-local].valid + .input-field-label,
-input[type=tel].valid + .input-field-label,
-input[type=number].valid + .input-field-label,
-input[type=search].valid + .input-field-label {
-  color: #76ff03;
-}
-
-input:not([type]).valid + .input-field-label + hr.focusline,
-input[type=text].valid + .input-field-label + hr.focusline,
-input[type=password].valid + .input-field-label + hr.focusline,
-input[type=email].valid + .input-field-label + hr.focusline,
-input[type=url].valid + .input-field-label + hr.focusline,
-input[type=time].valid + .input-field-label + hr.focusline,
-input[type=date].valid + .input-field-label + hr.focusline,
-input[type=datetime].valid + .input-field-label + hr.focusline,
-input[type=datetime-local].valid + .input-field-label + hr.focusline,
-input[type=tel].valid + .input-field-label + hr.focusline,
-input[type=number].valid + .input-field-label + hr.focusline,
-input[type=search].valid + .input-field-label + hr.focusline {
-  background: #76ff03;
-}
-
-input:not([type]).invalid + .input-field-label,
-input[type=text].invalid + .input-field-label,
-input[type=password].invalid + .input-field-label,
-input[type=email].invalid + .input-field-label,
-input[type=url].invalid + .input-field-label,
-input[type=time].invalid + .input-field-label,
-input[type=date].invalid + .input-field-label,
-input[type=datetime].invalid + .input-field-label,
-input[type=datetime-local].invalid + .input-field-label,
-input[type=tel].invalid + .input-field-label,
-input[type=number].invalid + .input-field-label,
-input[type=search].invalid + .input-field-label {
-  color: #d50000;
-}
-
-input:not([type]).invalid + .input-field-label + hr.focusline,
-input[type=text].invalid + .input-field-label + hr.focusline,
-input[type=password].invalid + .input-field-label + hr.focusline,
-input[type=email].invalid + .input-field-label + hr.focusline,
-input[type=url].invalid + .input-field-label + hr.focusline,
-input[type=time].invalid + .input-field-label + hr.focusline,
-input[type=date].invalid + .input-field-label + hr.focusline,
-input[type=datetime].invalid + .input-field-label + hr.focusline,
-input[type=datetime-local].invalid + .input-field-label + hr.focusline,
-input[type=tel].invalid + .input-field-label + hr.focusline,
-input[type=number].invalid + .input-field-label + hr.focusline,
-input[type=search].invalid + .input-field-label + hr.focusline {
-  background: #d50000;
-}
-
-input:not([type]).active + .input-field-label,
-input[type=text].active + .input-field-label,
-input[type=password].active + .input-field-label,
-input[type=email].active + .input-field-label,
-input[type=url].active + .input-field-label,
-input[type=time].active + .input-field-label,
-input[type=date].active + .input-field-label,
-input[type=datetime].active + .input-field-label,
-input[type=datetime-local].active + .input-field-label,
-input[type=tel].active + .input-field-label,
-input[type=number].active + .input-field-label,
-input[type=search].active + .input-field-label {
-  color: #1a237e;
-  -webkit-transform: translateY(-1.5rem) scale(0.7);
-  -moz-transform: translateY(-1.5rem) scale(0.7);
-  -o-transform: translateY(-1.5rem) scale(0.7);
-  -ms-transform: translateY(-1.5rem) scale(0.7);
-  transform: translateY(-1.5rem) scale(0.7);
-}
-
-input:not([type]).active + .input-field-label + hr.focusline,
-input[type=text].active + .input-field-label + hr.focusline,
-input[type=password].active + .input-field-label + hr.focusline,
-input[type=email].active + .input-field-label + hr.focusline,
-input[type=url].active + .input-field-label + hr.focusline,
-input[type=time].active + .input-field-label + hr.focusline,
-input[type=date].active + .input-field-label + hr.focusline,
-input[type=datetime].active + .input-field-label + hr.focusline,
-input[type=datetime-local].active + .input-field-label + hr.focusline,
-input[type=tel].active + .input-field-label + hr.focusline,
-input[type=number].active + .input-field-label + hr.focusline,
-input[type=search].active + .input-field-label + hr.focusline {
-  -webkit-transform: scaleX(1);
-  -moz-transform: scaleX(1);
-  -o-transform: scaleX(1);
-  -ms-transform: scaleX(1);
-  transform: scaleX(1);
-}
-
-input:not([type]).valid + .input-field-label,
-input[type=text].valid + .input-field-label,
-input[type=password].valid + .input-field-label,
-input[type=email].valid + .input-field-label,
-input[type=url].valid + .input-field-label,
-input[type=time].valid + .input-field-label,
-input[type=date].valid + .input-field-label,
-input[type=datetime].valid + .input-field-label,
-input[type=datetime-local].valid + .input-field-label,
-input[type=tel].valid + .input-field-label,
-input[type=number].valid + .input-field-label,
-input[type=search].valid + .input-field-label {
-  -webkit-transform: translateY(-1.5rem) scale(0.7);
-  -moz-transform: translateY(-1.5rem) scale(0.7);
-  -o-transform: translateY(-1.5rem) scale(0.7);
-  -ms-transform: translateY(-1.5rem) scale(0.7);
-  transform: translateY(-1.5rem) scale(0.7);
-}
-
-input:not([type]).valid + .input-field-label + hr.focusline,
-input[type=text].valid + .input-field-label + hr.focusline,
-input[type=password].valid + .input-field-label + hr.focusline,
-input[type=email].valid + .input-field-label + hr.focusline,
-input[type=url].valid + .input-field-label + hr.focusline,
-input[type=time].valid + .input-field-label + hr.focusline,
-input[type=date].valid + .input-field-label + hr.focusline,
-input[type=datetime].valid + .input-field-label + hr.focusline,
-input[type=datetime-local].valid + .input-field-label + hr.focusline,
-input[type=tel].valid + .input-field-label + hr.focusline,
-input[type=number].valid + .input-field-label + hr.focusline,
-input[type=search].valid + .input-field-label + hr.focusline {
-  -webkit-transform: scaleX(1);
-  -moz-transform: scaleX(1);
-  -o-transform: scaleX(1);
-  -ms-transform: scaleX(1);
-  transform: scaleX(1);
 }
 
 input:not([type]):focus,
@@ -3811,10 +3576,69 @@ i.fa::before {
   }
 }
 
-html,
-body {
-  /*Nanum Barun Gothic , NanumSquare*/
-  font-family: NanumSquare;
+.font-nbg {
+  font-family: "Nanum Barun Gothic" !important;
+}
+
+.font-nbg.ultra-light,
+.font-nbg .ultra-light {
+  font-weight: 200 !important;
+}
+
+.font-nbg.light,
+.font-nbg .light {
+  font-weight: 300 !important;
+}
+
+.font-nbg.regular,
+.font-nbg .regular {
+  font-weight: 400 !important;
+}
+
+.font-nbg.bold,
+.font-nbg .bold {
+  font-weight: 700 !important;
+}
+
+.font-ns {
+  font-family: "NanumSquare" !important;
+}
+
+.font-ns.ultra-light,
+.font-ns .ultra-light {
+  font-weight: 200 !important;
+}
+
+.font-ns.light,
+.font-ns .light {
+  font-weight: 300 !important;
+}
+
+.font-ns.regular,
+.font-ns .regular {
+  font-weight: 400 !important;
+}
+
+.font-ns.bold,
+.font-ns .bold {
+  font-weight: 700 !important;
+}
+
+.font-ns.extra-bold,
+.font-ns .extra-bold {
+  font-weight: 800 !important;
+}
+
+.point-color-brown {
+  color: #755858 !important;
+}
+
+.bold-size {
+  font-size: 1.7rem;
+}
+
+.bold-size-2 {
+  font-size: 1.4rem;
 }
 
 .intro-content .intro-img {
@@ -3837,6 +3661,11 @@ body {
   height: 380px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   margin: 6rem 2rem 6rem 2rem;
+}
+
+.intro-type-2 {
+  font-size: 2.5rem;
+  margin-bottom: 6rem;
 }
 
 .incumbent-background {
@@ -3867,7 +3696,6 @@ body {
   padding: 0 2rem;
   text-align: center;
   font-size: 3.3rem;
-  letter-spacing: 0.2rem;
   z-index: 2;
 }
 
@@ -3898,7 +3726,7 @@ body {
 
 .incumbent-intro .item-content {
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .intro-text-1 {
@@ -3926,11 +3754,6 @@ body {
   line-height: 60px;
   height: 60px;
   border-radius: 1rem;
-}
-
-.bold-text {
-  font-weight: 800;
-  font-size: 1.4rem;
 }
 
 .round-point {
@@ -4038,13 +3861,12 @@ body {
 }
 
 .cycle-content-header .intro-text {
-  font-size: 1.5rem;
+  font-size: 2rem;
   border-right: 1px solid #dc6e66;
-  padding-right: 1rem;
 }
 
 .cycle-content-header .price-text {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .cycle-content-header .price-text .price-number {
@@ -4119,15 +3941,83 @@ body {
   padding: 4rem 3.5rem;
 }
 
+.interval-top-2 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+.sale-propose-btn,
+.submit-btn {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 4rem;
+  height: 4rem;
+  padding: 0 3rem;
+  border-radius: 3rem;
+}
+
+.guide-text {
+  font-size: 1.2rem;
+}
+
+.submit-btn {
+  position: relative;
+  top: 2rem;
+  box-shadow: none !important;
+}
+
+.private-modal-trigger {
+  cursor: pointer;
+  -webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out;
+  -o-transition: color 0.2s ease-out;
+  -ms-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+
+.private-modal-trigger:hover {
+  color: #4d4d4d !important;
+}
+
+#privacy-modal1,
+#privacy-modal2 {
+  width: 85%;
+}
+
+#privacy-modal1 .privacy-text,
+#privacy-modal2 .privacy-text {
+  width: 100%;
+  height: 300px;
+  overflow: auto;
+  white-space: pre-line;
+  font-size: 1.2rem;
+}
+
 @media only screen and (max-width: 1366px) {
   .match {
     height: 85vh;
+  }
+
+  #privacy-modal {
+    width: 90%;
   }
 }
 
 @media only screen and (max-width: 720px) {
   .match {
     height: 60vh;
+  }
+
+  .sale-propose-btn,
+  .submit-btn {
+    font-size: 1.3rem;
+    line-height: 2.7rem;
+    height: 2.7rem;
+    padding: 0 2rem;
+  }
+
+  #privacy-modal {
+    width: 95%;
   }
 }
 
@@ -4198,5 +4088,55 @@ body {
   font-weight: 700;
   src: url(/style/font/NanumBarunGothicBold.eot);
   src: local("Nanum Barun Gothic Bold"), local("NanumBarunGothicBold"), url(/style/font/NanumBarunGothicBold.eot?#iefix) format("embedded-opentype"), url(/style/font/NanumBarunGothicBold.woff2) format("woff2"), url(/style/font/NanumBarunGothicBold.woff) format("woff"), url(/style/font/NanumBarunGothicBold.ttf) format("truetype");
+}
+
+#modal-shadow {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 120vh;
+  z-index: 1002;
+  background-color: black;
+  will-change: opacity;
+  opacity: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-height: 70%;
+  width: 55%;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+  will-change: transform;
+  opacity: 0;
+  z-index: 1003;
+  background-color: white;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.modal .modal-content {
+  padding: 1.2rem;
+}
+
+.modal .modal-footer {
+  display: block;
+  position: relative;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.2rem;
+  text-align: right;
+  margin: 0 1.2rem;
+}
+
+.modal .modal-title {
+  padding: 1.2rem;
+  font-size: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 /*# sourceMappingURL=main.css.map*/
