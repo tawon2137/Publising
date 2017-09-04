@@ -1,4 +1,5 @@
-$maxcol : 12;
+@import "./variable";
+
 
 *, *:before, *:after {
   box-sizing: inherit;
@@ -121,7 +122,7 @@ html{
     font-size: 16px;
 }
 .container{
-  width: 60% !important;
+  width: $container-width-l !important;
 }
 @media only screen and (max-width : 1366px) {
 
@@ -141,7 +142,7 @@ html{
       font-size: 14px;
   }
   .container{
-    width: 75% !important;
+    width: $container-width-m !important;
   }
 }
 @media only screen and (max-width : 720px) {
@@ -155,6 +156,6 @@ html{
       font-size: 12px;
   }
   .container{
-    width: 90% !important;
+      width: $container-width-s !important;
   }
 }

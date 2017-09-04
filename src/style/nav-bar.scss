@@ -50,7 +50,6 @@
           @include transition(background 0.2s ease-out);
           border-radius: 5px;
           cursor: pointer;
-          font-weight: bold;
           & a{
             text-decoration: none;
             color : inherit;
@@ -59,11 +58,12 @@
           &.title{
             position: relative;
             font-size: 2rem;
-            line-height: 90px;
             height: $nav-height;
+            padding: (($nav-height - $nav-height-img-height) / 2 ) 0;
             float: left;
             & img {
-              position: absolute;
+              position: relative;
+              height: $nav-height - 30px;
               top:0;
               left:0;
               bottom: 0;

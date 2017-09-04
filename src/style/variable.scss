@@ -1,4 +1,12 @@
 @import "./function.scss";
+
+//style 공통변수
+$maxcol : 12;
+
+$container-width-l: 1000px;
+$container-width-m: 90%;
+$container-width-s: 95%;
+
 //card 변수
 $card-radius: 2px;
 $card-link-color : #ffb300;
@@ -41,7 +49,7 @@ $input-bottomline-height : 1px;
 $placeholder-text-color : grey;
 $input-padding : 0 0.5rem;
 $input-font-size : 1rem;
-$input-active-color : #1a237e;
+$input-active-color : #fff;
 $input-dirty-color : #0288d1;
 $input-valid-color :  #76ff03;
 $input-invalid-color : #d50000;
@@ -58,6 +66,7 @@ $modal-radius : 2px;
 //nav-bar
 $nav-height-top : 100px;
 $nav-height : 90px;
+$nav-height-img-height: 60px;
 $nav-height-tablet : 50px;
 $nav-height-mobile : 40px;
 $nav-radius : 3px;
@@ -76,6 +85,6 @@ $content-text-height-m: 2rem;
 $content-line-height-m: 2.5rem;
 $content-text-height-s: 2rem;
 $content-line-height-s: 2.5rem;
-$cycle-l: 200px;
+$cycle-l: 230px;
 $cycle-m: 150px;
 $cycle-s: 68px;
