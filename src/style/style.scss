@@ -75,7 +75,7 @@ body{
     }
 
 
-    @media only screen and (min-width : 1366px) {
+    @media only screen and (min-width : 1000px) {
         @for $i from 1 through $maxcol {
           $colwidth : (100% / ($maxcol /$i));
           &.l#{$i}{
@@ -102,18 +102,19 @@ body{
   display: none !important;
 }
 
+
 .show-l{
   display: inline-block !important;
 }
 
 .hide-m{
-  display: inline-block !important;
+  display: initial !important;
 }
 .show-m{
   display: none !important;
 }
 .hide-s{
-  display: inline-block !important;
+  display: initial !important;
 }
 .show-s{
   display: none !important;
@@ -124,10 +125,10 @@ html{
 .container{
   width: $container-width-l !important;
 }
-@media only screen and (max-width : 1366px) {
+@media only screen and (max-width : 1000px) {
 
   .hide-l{
-    display: inline-block !important;
+    display: initial !important;
   }
   .show-l{
     display: none !important;
@@ -136,7 +137,7 @@ html{
     display: none !important;
   }
   .show-m{
-    display: inline-block !important;
+    display: initial !important;
   }
   html{
       font-size: 14px;
@@ -150,7 +151,7 @@ html{
     display: none !important;
   }
   .show-s{
-    display: inline-block !important;
+    display: initial !important;
   }
   html{
       font-size: 12px;

@@ -108,7 +108,7 @@
   }
   .tw-sideNav{
     &.fixed{
-        @include transform("translateX(0%);")
+        @include transform("translateX(0%);");
         box-shadow: $sidenav-fixed-shadow;
     }
   }
