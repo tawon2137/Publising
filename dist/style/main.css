@@ -120,6 +120,14 @@
   color: #d14136 !important;
 }
 
+.red-t-2 {
+  background-color: #ff7072 !important;
+}
+
+.red-t-2-text {
+  color: #ff7072 !important;
+}
+
 .pink {
   background-color: #e91e63 !important;
 }
@@ -2492,7 +2500,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1000px) {
   .row .col.l1 {
     width: 8.33333%;
   }
@@ -2695,7 +2703,7 @@ body {
 }
 
 .hide-m {
-  display: inline-block !important;
+  display: initial !important;
 }
 
 .show-m {
@@ -2703,7 +2711,7 @@ body {
 }
 
 .hide-s {
-  display: inline-block !important;
+  display: initial !important;
 }
 
 .show-s {
@@ -2718,9 +2726,9 @@ html {
   width: 1000px !important;
 }
 
-@media only screen and (max-width: 1366px) {
+@media only screen and (max-width: 1000px) {
   .hide-l {
-    display: inline-block !important;
+    display: initial !important;
   }
 
   .show-l {
@@ -2732,7 +2740,7 @@ html {
   }
 
   .show-m {
-    display: inline-block !important;
+    display: initial !important;
   }
 
   html {
@@ -2740,7 +2748,7 @@ html {
   }
 
   .container {
-    width: 90% !important;
+    width: 94% !important;
   }
 }
 
@@ -2750,7 +2758,7 @@ html {
   }
 
   .show-s {
-    display: inline-block !important;
+    display: initial !important;
   }
 
   html {
@@ -2758,7 +2766,7 @@ html {
   }
 
   .container {
-    width: 95% !important;
+    width: 97% !important;
   }
 }
 
@@ -3576,6 +3584,11 @@ i.fa::before {
   }
 }
 
+div[id*="cycle-header"] {
+  display: inline-block;
+  width: 100%;
+}
+
 .font-nbg {
   font-family: "Nanum Barun Gothic" !important;
 }
@@ -3629,6 +3642,11 @@ i.fa::before {
   font-weight: 800 !important;
 }
 
+.font-tm {
+  font-family: "Tmon" !important;
+  font-weight: 400;
+}
+
 .point-color-brown {
   color: #755858 !important;
 }
@@ -3653,14 +3671,16 @@ i.fa::before {
 }
 
 .shadow-card-container {
-  margin-bottom: 1rem;
+  margin-bottom: 8rem;
+}
+
+.shadow-card-container .col {
+  padding: 0 2rem;
 }
 
 .shadow-card-container .shadow-card {
-  width: 300px;
-  height: 380px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-  margin: 6rem 2rem 6rem 2rem;
+  width: 100%;
 }
 
 .intro-type-2 {
@@ -3672,8 +3692,8 @@ i.fa::before {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
   z-index: -1;
+  width: 100%;
   height: 100%;
 }
 
@@ -3703,13 +3723,13 @@ i.fa::before {
   margin: 3rem 0 2rem 0;
 }
 
+.incumbent-intro .incumbent-intro-title-text.title-3 {
+  margin: 5rem 0 10rem 0;
+}
+
 .incumbent-intro .incumbent-intro-item {
   margin: 2rem 0 1rem 0;
   padding: 0 2rem;
-}
-
-.incumbent-intro .incumbent-intro-item .item-content {
-  text-align: center;
 }
 
 .incumbent-intro .incumbent-intro-item img {
@@ -3725,7 +3745,6 @@ i.fa::before {
 }
 
 .incumbent-intro .item-content {
-  text-align: center;
   font-size: 1.5rem;
 }
 
@@ -3773,7 +3792,7 @@ i.fa::before {
 }
 
 .intro-icon {
-  width: 27.5%;
+  width: 30%;
   position: relative;
 }
 
@@ -3784,7 +3803,7 @@ i.fa::before {
 
 .intro-icon .icon-img {
   width: 100%;
-  height: 150px;
+  height: 170px;
   padding: 1rem 4rem;
   border-bottom: 2px solid #ff6768;
 }
@@ -3796,7 +3815,10 @@ i.fa::before {
 }
 
 .intro-line {
-  width: 8.75%;
+  width: 5%;
+  position: relative;
+  border-bottom: 2px dotted #ff7072;
+  top: 150px;
 }
 
 .align-right {
@@ -3816,7 +3838,6 @@ i.fa::before {
 }
 
 .match {
-  height: 100vh;
   text-align: center;
 }
 
@@ -3851,6 +3872,8 @@ i.fa::before {
 .cycle-content-header {
   height: 80px;
   position: relative;
+  display: inline-block;
+  width: 100%;
 }
 
 .cycle-content-header .content {
@@ -3993,19 +4016,283 @@ i.fa::before {
   font-size: 1.2rem;
 }
 
-@media only screen and (max-width: 1366px) {
-  .match {
-    height: 85vh;
+.mobile-header {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.mobile-header .title-content {
+  height: 5rem;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.mobile-header .title-content .title-text {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.mobile-header .title-content .title-text .sub {
+  font-size: 1.8rem;
+}
+
+.mobile-header .title-content .title-text .main {
+  font-size: 2.1rem;
+}
+
+.mobile-header ul {
+  margin: 0 auto;
+}
+
+.mobile-header .active-line {
+  position: absolute;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  width: 25%;
+  -webkit-transition: transform 0.15s ease-out;
+  -moz-transition: transform 0.15s ease-out;
+  -o-transition: transform 0.15s ease-out;
+  -ms-transition: transform 0.15s ease-out;
+  transition: transform 0.15s ease-out;
+}
+
+.tab-menu {
+  position: relative;
+  width: 100%;
+  height: 4.6rem;
+  line-height: 1.4rem;
+}
+
+.tab-menu .tab {
+  height: 100%;
+  position: relative;
+  width: 25%;
+  display: inline-block;
+  float: left;
+}
+
+.tab-menu .tab div {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.tab-menu .tab .sub {
+  font-size: 1.8rem;
+}
+
+.tab-menu .tab .main {
+  font-size: 1.2rem;
+}
+
+.vertical-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.mobile-cycle img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .shadow-card-container {
+    margin-bottom: 4rem;
+  }
+
+  .shadow-card-container .shadow-card {
+    width: 400px;
+    height: 500px;
+    margin: 2rem 0 2rem 0;
   }
 
   #privacy-modal {
     width: 90%;
   }
+
+  .mobile-header .title-content {
+    border-bottom: 1px solid #dfdfdf;
+  }
+
+  .mobile-header .title-content .title-text .small {
+    font-size: 1.1rem;
+  }
+
+  .mobile-header .title-content .title-text .sub {
+    font-size: 2.0rem;
+  }
+
+  .mobile-header .title-content .title-text .main {
+    font-size: 2.3rem;
+  }
+
+  .mobile-header ul {
+    margin: 0 auto;
+  }
+
+  .mobile-header .active-line {
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 25%;
+  }
+
+  .intro-content .intro-img {
+    margin-top: 12.6rem;
+  }
+
+  .intro-content .intro-img img {
+    padding: 0;
+  }
+
+  .incumbent-intro .incumbent-intro-item img {
+    width: 150px;
+    height: 200px;
+  }
+
+  .incumbent-intro .incumbent-intro-item {
+    padding: 0;
+  }
+
+  .incumbent-intro .item-text {
+    left: 33.3%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+
+  .incumbent-intro .incumbent-intro-title-text.title-3 {
+    margin: 3rem 0 3rem 0;
+  }
+
+  .incumbent-intro .incumbent-intro-text {
+    padding: 0;
+    margin: 0 0 3rem 0;
+    line-height: 2rem;
+  }
+
+  .incumbent-intro .item-content {
+    font-size: 1.4rem;
+  }
+
+  .tab-menu {
+    line-height: 1.7rem;
+  }
+
+  .tab-menu .tab .sub {
+    font-size: 1.4rem;
+  }
+
+  .tab-menu .tab .main {
+    font-size: 1.7rem;
+  }
+
+  .intro-icon {
+    margin: 0 auto 4rem;
+    width: 330px;
+  }
+
+  .intro-icon .icon-img {
+    height: auto;
+  }
+
+  .cycle-content-header {
+    height: 60px;
+  }
+
+  .cycle-content-header .content {
+    height: 40px;
+    line-height: 40px;
+    margin: 10px 0;
+  }
+
+  .cycle-content-header .intro-text {
+    font-size: 1.7rem;
+  }
+
+  .cycle-content-header .intro-text .price-number {
+    font-size: 1.5rem;
+  }
 }
 
 @media only screen and (max-width: 720px) {
-  .match {
-    height: 60vh;
+  .match .match-title {
+    font-size: 1.5rem;
+    padding: 3rem 0;
+  }
+
+  .match .match-title .block {
+    margin: 0 0.5rem;
+  }
+
+  .match .match-title .text {
+    position: relative;
+    bottom: 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cycle-content-header {
+    height: 45px;
+  }
+
+  .cycle-content-header .content {
+    height: 30px;
+    line-height: 30px;
+    margin: 7.5px 0;
+  }
+
+  .cycle-content-header .intro-text {
+    font-size: 1.3rem;
+  }
+
+  .cycle-content-header .price-text {
+    font-size: 1rem;
+  }
+
+  .cycle-content-header .price-text .price-number {
+    font-size: 1.3rem;
+  }
+
+  .shadow-card-container {
+    margin-bottom: 2rem;
+  }
+
+  .shadow-card-container .shadow-card {
+    width: 230px;
+    height: 280px;
+  }
+
+  .intro-content .intro-img {
+    margin-top: 12.6rem;
+  }
+
+  .intro-content .intro-img img {
+    padding: 0;
+  }
+
+  .tab-menu .tab .sub {
+    font-size: 1rem;
+  }
+
+  .tab-menu .tab .main {
+    font-size: 1.3rem;
   }
 
   .sale-propose-btn,
@@ -4019,13 +4306,53 @@ i.fa::before {
   #privacy-modal {
     width: 95%;
   }
-}
 
-@font-face {
-  font-family: 'Tmon';
-  font-weight: normal;
-  font-style: normal;
-  src: url(/style/font/TmonMonsori.ttf) format("truetype");
+  .incumbent-intro .incumbent-intro-title-text.title-3 {
+    margin: 3rem 0 3rem 0;
+  }
+
+  .incumbent-intro .incumbent-intro-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .incumbent-intro .item-text {
+    left: 33.3%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+
+  .intro-text-1 {
+    line-height: 3rem;
+  }
+
+  .intro-text-1 .background {
+    padding: 0.5rem 1rem;
+    background: #d14136;
+    border-radius: 0 1rem 0 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .intro-text-1 .text-border-bottom {
+    border-bottom: 1.5px solid #d14136;
+  }
+
+  .intro-type-2 {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+  }
+
+  .incumbent-intro .incumbent-intro-text {
+    padding: 0;
+    margin: 0 0 3rem 0;
+    line-height: 2rem;
+  }
+
+  .intro-icon {
+    margin: 0 auto 4rem;
+    width: 210px;
+  }
 }
 
 @font-face {
@@ -4088,6 +4415,13 @@ i.fa::before {
   font-weight: 700;
   src: url(/style/font/NanumBarunGothicBold.eot);
   src: local("Nanum Barun Gothic Bold"), local("NanumBarunGothicBold"), url(/style/font/NanumBarunGothicBold.eot?#iefix) format("embedded-opentype"), url(/style/font/NanumBarunGothicBold.woff2) format("woff2"), url(/style/font/NanumBarunGothicBold.woff) format("woff"), url(/style/font/NanumBarunGothicBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Tmon';
+  font-style: normal;
+  font-weight: 400;
+  src: local("TmonMonsori"), local("TmonMonsori"), url(/style/font/TmonMonsori.ttf.ttf) format("truetype");
 }
 
 #modal-shadow {

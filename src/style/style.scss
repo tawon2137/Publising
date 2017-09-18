@@ -108,13 +108,13 @@ body{
 }
 
 .hide-m{
-  display: initial !important;
+  display: inline-block !important;
 }
 .show-m{
   display: none !important;
 }
 .hide-s{
-  display: initial !important;
+  display: inline-block !important;
 }
 .show-s{
   display: none !important;
@@ -128,7 +128,7 @@ html{
 @media only screen and (max-width : 1000px) {
 
   .hide-l{
-    display: initial !important;
+    display: inline-block !important;
   }
   .show-l{
     display: none !important;
@@ -137,7 +137,7 @@ html{
     display: none !important;
   }
   .show-m{
-    display: initial !important;
+    display: inline-block !important;
   }
   html{
       font-size: 14px;
@@ -146,12 +146,13 @@ html{
     width: $container-width-m !important;
   }
 }
+
 @media only screen and (max-width : 720px) {
   .hide-s{
     display: none !important;
   }
   .show-s{
-    display: initial !important;
+    display: inline-block !important;
   }
   html{
       font-size: 12px;
