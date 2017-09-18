@@ -2703,7 +2703,7 @@ body {
 }
 
 .hide-m {
-  display: initial !important;
+  display: inline-block !important;
 }
 
 .show-m {
@@ -2711,7 +2711,7 @@ body {
 }
 
 .hide-s {
-  display: initial !important;
+  display: inline-block !important;
 }
 
 .show-s {
@@ -2728,7 +2728,7 @@ html {
 
 @media only screen and (max-width: 1000px) {
   .hide-l {
-    display: initial !important;
+    display: inline-block !important;
   }
 
   .show-l {
@@ -2740,7 +2740,7 @@ html {
   }
 
   .show-m {
-    display: initial !important;
+    display: inline-block !important;
   }
 
   html {
@@ -2758,7 +2758,7 @@ html {
   }
 
   .show-s {
-    display: initial !important;
+    display: inline-block !important;
   }
 
   html {
@@ -3613,6 +3613,12 @@ div[id*="cycle-header"] {
   font-weight: 700 !important;
 }
 
+.font-dh {
+  font-family: "dohyun" !important;
+  font-style: normal;
+  font-weight: 400;
+}
+
 .font-ns {
   font-family: "NanumSquare" !important;
 }
@@ -3647,6 +3653,20 @@ div[id*="cycle-header"] {
   font-weight: 400;
 }
 
+.question-text {
+  display: inline-block;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 3.5rem;
+  font-size: 2rem;
+  border-radius: 4rem;
+  border: 2px solid #fff;
+}
+
+.propose-desc {
+  padding: 3rem 2rem;
+  font-size: 1.5rem;
+}
+
 .point-color-brown {
   color: #755858 !important;
 }
@@ -3657,6 +3677,11 @@ div[id*="cycle-header"] {
 
 .bold-size-2 {
   font-size: 1.4rem;
+}
+
+.propose-container {
+  position: relative;
+  border: 7px solid #fff;
 }
 
 .intro-content .intro-img {
@@ -3708,7 +3733,7 @@ div[id*="cycle-header"] {
   position: absolute;
   width: 100%;
   z-index: -1;
-  height: 1600px;
+  height: auto;
 }
 
 .incumbent-intro .incumbent-intro-title-text {
@@ -3769,10 +3794,11 @@ div[id*="cycle-header"] {
 
 .propose-btn-container .propose-btn {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 400;
   line-height: 60px;
   height: 60px;
-  border-radius: 1rem;
+  padding: 0 2.5rem;
+  border-radius: 1.5rem;
 }
 
 .round-point {
@@ -3972,11 +3998,12 @@ div[id*="cycle-header"] {
 .sale-propose-btn,
 .submit-btn {
   font-size: 2rem;
-  font-weight: bold;
   line-height: 4rem;
   height: 4rem;
-  padding: 0 3rem;
+  padding: 0rem 3rem;
+  margin: 2rem 0;
   border-radius: 3rem;
+  background: #d14136;
 }
 
 .guide-text {
@@ -3984,8 +4011,14 @@ div[id*="cycle-header"] {
 }
 
 .submit-btn {
-  position: relative;
-  top: 2rem;
+  position: absolute;
+  bottom: -4rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   box-shadow: none !important;
 }
 
@@ -4051,17 +4084,30 @@ div[id*="cycle-header"] {
   margin: 0 auto;
 }
 
-.mobile-header .active-line {
+.mobile-header .active-line-container {
   position: absolute;
   height: 3px;
   left: 0;
   bottom: 0;
   width: 25%;
+  text-align: center;
   -webkit-transition: transform 0.15s ease-out;
   -moz-transition: transform 0.15s ease-out;
   -o-transition: transform 0.15s ease-out;
   -ms-transition: transform 0.15s ease-out;
   transition: transform 0.15s ease-out;
+}
+
+.mobile-header .active-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+  width: 40%;
+  height: 100%;
+  background: #d34036;
+  display: inline-block;
 }
 
 .tab-menu {
@@ -4134,24 +4180,12 @@ div[id*="cycle-header"] {
     font-size: 1.1rem;
   }
 
-  .mobile-header .title-content .title-text .sub {
-    font-size: 2.0rem;
-  }
-
   .mobile-header .title-content .title-text .main {
     font-size: 2.3rem;
   }
 
   .mobile-header ul {
     margin: 0 auto;
-  }
-
-  .mobile-header .active-line {
-    position: absolute;
-    height: 3px;
-    left: 0;
-    bottom: 0;
-    width: 25%;
   }
 
   .intro-content .intro-img {
@@ -4189,7 +4223,7 @@ div[id*="cycle-header"] {
   }
 
   .incumbent-intro .item-content {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   .tab-menu {
@@ -4292,19 +4326,15 @@ div[id*="cycle-header"] {
   }
 
   .tab-menu .tab .main {
-    font-size: 1.3rem;
-  }
-
-  .sale-propose-btn,
-  .submit-btn {
-    font-size: 1.3rem;
-    line-height: 2.7rem;
-    height: 2.7rem;
-    padding: 0 2rem;
+    font-size: 1.2rem;
   }
 
   #privacy-modal {
     width: 95%;
+  }
+
+  .incumbent-intro .incumbent-intro-title-text.title-2 {
+    padding: 0 1rem;
   }
 
   .incumbent-intro .incumbent-intro-title-text.title-3 {
@@ -4312,8 +4342,11 @@ div[id*="cycle-header"] {
   }
 
   .incumbent-intro .incumbent-intro-item img {
-    width: 100%;
-    height: auto;
+    width: 70px;
+    height: 90px;
+    margin: 1rem 1rem 1rem 0;
+    float: right;
+    padding: 0;
   }
 
   .incumbent-intro .item-text {
@@ -4352,6 +4385,32 @@ div[id*="cycle-header"] {
   .intro-icon {
     margin: 0 auto 4rem;
     width: 210px;
+  }
+
+  .propose-container {
+    border: 0;
+  }
+
+  .footer-text {
+    text-align: center;
+  }
+
+  .question-text {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    border: 3px solid #fff;
+  }
+
+  .question-text .phone-number {
+    font-size: 1.8rem;
+  }
+
+  .question-text .question-title {
+    font-size: 2rem;
+  }
+
+  .propose-desc {
+    font-size: 1.5rem;
   }
 }
 
@@ -4421,7 +4480,14 @@ div[id*="cycle-header"] {
   font-family: 'Tmon';
   font-style: normal;
   font-weight: 400;
-  src: local("TmonMonsori"), local("TmonMonsori"), url(/style/font/TmonMonsori.ttf.ttf) format("truetype");
+  src: local("TmonMonsori"), local("TmonMonsori"), url(/style/font/TmonMonsori.otf.woff) format("woff"), url(/style/font/TmonMonsori.ttf.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'dohyun';
+  font-style: normal;
+  font-weight: 400;
+  src: local("dohyun"), local("dohyun"), url(/style/font/BMDOHYEON_otf.woff) format("woff"), url(/style/font/BMDOHYEON_ttf.ttf) format("truetype");
 }
 
 #modal-shadow {
