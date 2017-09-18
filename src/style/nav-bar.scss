@@ -61,6 +61,7 @@
             height: $nav-height;
             padding: (($nav-height - $nav-height-img-height) / 2 ) 0;
             float: left;
+            line-height: 36px;
             & img {
               position: relative;
               height: $nav-height - 30px;
