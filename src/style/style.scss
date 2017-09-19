@@ -145,6 +145,10 @@ html{
   .container{
     width: $container-width-m !important;
   }
+  .center-m {
+    text-align: center !important;
+  }
+
 }
 
 @media only screen and (max-width : 720px) {
